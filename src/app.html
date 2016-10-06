@@ -1,0 +1,34 @@
+ <template>
+  
+  <header>
+    <nav class="blue">  
+      <a href="" class="brand-logo center">Logo</a>
+    </nav>
+  </header>
+  
+  <h1>${message}</h1>
+
+  <input type="text" value.bind="login">
+  <button class="btn" click.trigger='add()'>Ajouter</button>
+
+
+  <div>${login}</div>
+
+  <table class="bordered">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr css.bind="t.checked ? blue : null" repeat.for="t of tab">
+      <td>${t.title}</td></td>
+
+      <td><i  click.trigger="remove(t.title)" style="font-size:25px" class="large material-icons">delete_forever</i></td>
+      <td><input id.bind="t.id" checked.bind="t.checked" type="checkbox"> <label for.bind="t.id">Done</label>
+       </td>
+    </tr>
+  </table>
+
+  ${log}
+</template>
+ 
